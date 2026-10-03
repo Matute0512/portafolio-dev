@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-terminal-bg: #030712;
+  --color-terminal-surface: #090d16;
+  --color-terminal-card: #0d131f;
+  --color-terminal-card-hover: #131c2e;
+  --color-terminal-border: #1e293b;
+  --color-terminal-border-glow: rgba(16, 185, 129, 0.2);
+
+  --color-accent-emerald: #10b981;
+  --color-accent-emerald-light: #34d399;
+  --color-accent-cyan: #06b6d4;
+  --color-accent-cyan-light: #22d3ee;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  code, pre, kbd, samp {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Background grid scanline & ambient glow effect */
+.bg-tech-grid {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 60%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px, 32px 32px;
+}
+
+/* Custom terminal glowing text shadow */
+.text-glow-emerald {
+  text-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 16px rgba(6, 182, 212, 0.4);
+}
+
+/* Box glow */
+.box-glow-emerald {
+  box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.15), 0 0 10px -2px rgba(16, 185, 129, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
