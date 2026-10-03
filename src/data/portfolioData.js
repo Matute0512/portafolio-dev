@@ -11,8 +11,8 @@ export const PERSONAL_INFO = {
   location: "Santiago, Chile",
   status: "Open to Trainee / Junior Roles",
   availability: "Disponible para incorporación inmediata",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
+  github: "https://github.com/Matute0512",
+  linkedin: "https://www.linkedin.com/in/matiastorres0512",
   terminalBadge: "mt@system:~$",
   summary:
     "Estudiante de 2° año de Ingeniería Informática con sólida base en matemáticas discretas, algoritmia y arquitectura de software. Me especializo en transformar problemas computacionales complejos en soluciones eficientes y escalables, desde sistemas de bajo/medio nivel en Java, Python y Rust hasta aplicaciones móviles y web reactivas con Flutter y React.",
