@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import SectionHeader from './ui/SectionHeader';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { MailIcon, CopyIcon, CheckIcon, GithubIcon, LinkedinIcon } from './ui/Icons';
+import { MailIcon, CopyIcon, CheckIcon, GithubIcon, LinkedinIcon, DownloadIcon } from './ui/Icons';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -52,7 +52,7 @@ export default function Contact() {
           <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
             Estoy buscando activamente mi primera oportunidad formal en desarrollo de software como{' '}
             <strong className="text-emerald-400 font-semibold">Trainee / Junior</strong>.
-            Cuento con sólida disciplina algorítmica, rapidez de aprendizaje y entusiasmo por aportar a un equipo de ingeniería de alto rendimiento.
+            Cuento con sólida disciplina en Clean Architecture, TDD y algoritmos, además de entusiasmo por aportar valor inmediato al equipo.
           </p>
 
           {/* Interactive Email Bar with Copy to Clipboard */}
@@ -82,7 +82,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Direct Mail Action CTA */}
+          {/* Action CTAs: Direct Mail & Resume Download */}
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={`mailto:${PERSONAL_INFO.email}?subject=Oportunidad%20Laboral%20-%20Ingenier%C3%ADa%20de%20Software`}
@@ -90,6 +90,15 @@ export default function Contact() {
             >
               <MailIcon className="w-4 h-4" />
               <span>Abrir Cliente de Correo</span>
+            </a>
+
+            <a
+              href={PERSONAL_INFO.resumeUrl}
+              download="CV-Matias-Torres.pdf"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-gray-900 hover:bg-gray-800 border border-emerald-500/40 hover:border-emerald-400 text-emerald-300 font-mono text-sm font-medium transition-all duration-200 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+            >
+              <DownloadIcon className="w-4 h-4 text-emerald-400" />
+              <span>Descargar CV (PDF)</span>
             </a>
           </div>
 

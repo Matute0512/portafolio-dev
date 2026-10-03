@@ -1,5 +1,6 @@
 # Matías Torres — Software Engineering Portfolio
 
+[![CI](https://github.com/Matute0512/portafolio-dev/actions/workflows/ci.yml/badge.svg)](https://github.com/Matute0512/portafolio-dev/actions/workflows/ci.yml)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)

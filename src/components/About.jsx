@@ -1,5 +1,5 @@
 import SectionHeader from './ui/SectionHeader';
-import { SKILL_CATEGORIES } from '../data/portfolioData';
+import { SKILL_CATEGORIES, PERSONAL_INFO } from '../data/portfolioData';
 import { CodeIcon, CpuIcon, LayersIcon } from './ui/Icons';
 
 export default function About() {
@@ -33,30 +33,44 @@ export default function About() {
         {/* Engineering Narrative */}
         <div className="lg:col-span-6 space-y-5 text-gray-300 text-base leading-relaxed">
           <p>
-            Mi aproximación a la programación comenzó con el interés por comprender cómo funcionan las cosas por debajo del capó: 
-            resolver acertijos lógicos y analizar la eficiencia temporal y espacial de cada algoritmo.
+            Mi aproximación a la ingeniería de software está basada en comprender a profundidad los fundamentos: 
+            complejidad algorítmica <span className="text-emerald-400 font-mono font-medium">Big-O</span>, estructuras de datos en memoria, 
+            y arquitectura desacoplada antes de escribir la primera línea de código.
           </p>
           <p>
             Actualmente curso el <strong className="text-white font-medium">2° año de Ingeniería Informática</strong>, 
-            donde fortalezco mi base teórica en estructuras de datos, matemáticas discretas, concurrencia y arquitectura de computadores.
+            donde profundizo en matemáticas discretas, concurrencia, teoría de sistemas y diseño orientado a objetos. 
+            Me caracterizo por aplicar metodologías formales como <strong className="text-emerald-400 font-medium">Clean Architecture</strong>, 
+            <strong className="text-emerald-400 font-medium"> TDD</strong> (Test-Driven Development) y registros formales de decisiones de arquitectura (ADRs).
           </p>
           <p>
-            No me limito a un único framework; priorizo la ingeniería de software fundamentada. Ya sea escribiendo lógica de sistemas en{' '}
-            <span className="text-emerald-400 font-mono font-medium">Java / Rust</span>, automatizando flujos en{' '}
-            <span className="text-emerald-400 font-mono font-medium">Python</span> o construyendo interfaces móviles reactivas y fluidas en{' '}
-            <span className="text-emerald-400 font-mono font-medium">Flutter</span>, me enfoco en escribir código limpio, legible y escalable.
+            Mi experiencia práctica abarca desde sistemas de cálculo astrofísico en <span className="text-gray-100 font-medium">Python y FastAPI</span> y 
+            simuladores concurrentes multihilo con control de contrapresión, hasta aplicaciones móviles completas en <span className="text-gray-100 font-medium">Flutter y Dart</span> con 
+            persistencia offline y sincronización en la nube vía <span className="text-gray-100 font-medium">Firebase</span>.
           </p>
 
-          {/* Philosophy Card */}
-          <div className="p-4 rounded-lg bg-gray-900/70 border border-gray-800 font-mono text-xs text-gray-400 space-y-2 mt-6">
+          {/* Education & Language Badges for Recruiters */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div className="p-3.5 rounded-lg bg-gray-900/80 border border-gray-800 font-mono text-xs">
+              <span className="text-emerald-400 font-semibold block mb-1">🎓 Formación Universitaria:</span>
+              <span className="text-gray-300">{PERSONAL_INFO.education}</span>
+            </div>
+            <div className="p-3.5 rounded-lg bg-gray-900/80 border border-gray-800 font-mono text-xs">
+              <span className="text-cyan-400 font-semibold block mb-1">🌐 Nivel de Inglés:</span>
+              <span className="text-gray-300">{PERSONAL_INFO.englishLevel}</span>
+            </div>
+          </div>
+
+          {/* Technical Principles */}
+          <div className="p-4 rounded-lg bg-gray-900/50 border border-gray-800/80 font-mono text-xs text-gray-400 space-y-2 mt-4">
             <div className="text-emerald-400 font-semibold flex items-center gap-2">
               <span aria-hidden="true">⚙️</span>
-              <span>Principios de Desarrollo:</span>
+              <span>Pilares de Ingeniería:</span>
             </div>
             <ul className="space-y-1.5 pl-2">
-              <li>• Código autodocumentado y arquitectura desacoplada.</li>
-              <li>• Comprensión de la complejidad Big-O antes de codear.</li>
-              <li>• Mentalidad de aprendizaje continuo y adaptación rápida.</li>
+              <li>• Desacoplamiento estricto: Reglas de negocio independientes de frameworks.</li>
+              <li>• Cobertura rigurosa mediante pruebas unitarias y de integración.</li>
+              <li>• Observabilidad y manejo defensivo de errores y contrapresión.</li>
             </ul>
           </div>
         </div>
@@ -66,7 +80,7 @@ export default function About() {
           <div className="bg-[#090d16] border border-gray-800/90 rounded-xl p-5 md:p-6 shadow-xl">
             <h3 className="text-xs font-mono text-emerald-400 uppercase tracking-wider mb-4 flex items-center justify-between">
               <span>// Stack Técnico & Capacidades</span>
-              <span className="text-gray-500 font-normal">v2.4.0</span>
+              <span className="text-gray-500 font-normal">v3.0.0</span>
             </h3>
 
             <div className="space-y-6">

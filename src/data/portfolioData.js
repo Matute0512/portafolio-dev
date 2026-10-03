@@ -1,6 +1,7 @@
 /**
  * Portfolio Data Model - Single Source of Truth
- * Designed for High-Performance Rendering & Maintainability
+ * High-Performance Data Architecture for Production
+ * Real Finished Repositories from Matute0512 GitHub
  */
 
 export const PERSONAL_INFO = {
@@ -8,30 +9,59 @@ export const PERSONAL_INFO = {
   role: "Software Engineer & Systems Developer",
   shortRole: "Ingeniería Informática // 2° Año",
   email: "matiastorres678@gmail.com",
-  location: "Santiago, Chile",
+  location: "Santiago, Chile / Remote",
   status: "Open to Trainee / Junior Roles",
   availability: "Disponible para incorporación inmediata",
   github: "https://github.com/Matute0512",
   linkedin: "https://www.linkedin.com/in/matiastorres0512",
+  resumeUrl: "/cv-matias-torres.pdf",
   terminalBadge: "mt@system:~$",
+  englishLevel: "B2 / Técnico (Lectura fluida de documentación técnica, RFCs y comunicación técnica)",
+  education: "2° año de Ingeniería Informática • Énfasis en Algoritmia, Concurrencia y Clean Architecture",
   summary:
-    "Estudiante de 2° año de Ingeniería Informática con sólida base en matemáticas discretas, algoritmia y arquitectura de software. Me especializo en transformar problemas computacionales complejos en soluciones eficientes y escalables, desde sistemas de bajo/medio nivel en Java, Python y Rust hasta aplicaciones móviles y web reactivas con Flutter y React.",
+    "Estudiante de 2° año de Ingeniería Informática con sólida base en matemáticas discretas, algoritmia y arquitectura de software. Me especializo en construir software robusto aplicando Clean Architecture, TDD y patrones concurrentes: desde simuladores astrofísicos y colas de mensajes en Python hasta aplicaciones móviles reactivas con Flutter y Firebase.",
 };
 
-export const TERMINAL_SNIPPET = {
-  command: "cat developer_profile.json",
-  output: {
-    engineer: "Matías Torres",
-    academic_status: "2nd Year CS Student",
-    core_competencies: [
-      "Algorithmic Optimization & Big-O Analysis",
-      "Clean Architecture & Design Patterns",
-      "Cross-Platform Mobile Development (Flutter/Dart)",
-      "Systems Logic (Java / Python / Rust)"
-    ],
-    operational_mindset: "Performance-first, decoupled code, continuous learning"
+export const TERMINAL_TABS = [
+  {
+    id: "profile",
+    fileName: "profile.json",
+    badge: "JSON",
+    code: `{
+  "engineer": "Matías Torres",
+  "status": "Available for Trainee / Junior Roles",
+  "focus": [
+    "Clean Architecture & DDD Principles",
+    "Concurrent Systems & Backpressure Handling",
+    "Test-Driven Development (TDD)",
+    "Cross-Platform Mobile (Flutter SDK & Dart)"
+  ],
+  "english_level": "B2 - Technical & Documentation Fluency"
+}`
+  },
+  {
+    id: "architecture",
+    fileName: "architecture.sh",
+    badge: "BASH",
+    code: `#!/usr/bin/env bash
+# Engineering Mindset & Principles
+echo ">> Verifying system integrity..."
+test_layers --inwards-only "domain -> application -> infrastructure"
+enforce_tdd --coverage="100%" --framework="pytest / flutter_test"
+check_concurrency --pattern="producer-consumer" --backpressure="enabled"
+validate_math --algorithm="Parity Inversion O(N) & JPL Horizons 1e-6 AU"`
+  },
+  {
+    id: "metrics",
+    fileName: "metrics.log",
+    badge: "TELEMETRY",
+    code: `[STATUS] CI Pipelines: Passing (Backend CI, Code Quality, Static Analysis)
+[TESTS]  Sliding Puzzle Engine: 28 unit & widget tests verified
+[COVERAGE] Message Queue Simulator: 100% test coverage (Pytest + TDD)
+[ACCURACY] Solar Simulator: JPL DE440s ephemeris verified at 1e-6 AU
+[ACCESSIBILITY] WCAG 2.1 AA compliant • Strict contrast & semantic landmarks`
   }
-};
+];
 
 export const NAV_LINKS = [
   { id: "sobre-mi", label: "01. // Sobre Mí", href: "#sobre-mi" },
@@ -45,72 +75,111 @@ export const SKILL_CATEGORIES = [
     category: "Lenguajes Core",
     icon: "code",
     skills: [
-      { name: "Java", level: "Avanzado / Académico", note: "POO, Colecciones, Concurrencia básica" },
-      { name: "Python", level: "Intermedio / Avanzado", note: "Estructuras de datos, APIs, Automatización" },
-      { name: "Rust", level: "En formación activa", note: "Memory Safety, Ownership, CLI tooling" },
-      { name: "Dart", level: "Intermedio / Avanzado", note: "Asincronía, Tipado estático, Flutter SDK" },
-      { name: "JavaScript / TypeScript", level: "Intermedio", note: "ESNext, React 19, async/await" },
+      { name: "Python", level: "Avanzado", note: "Clean Architecture, Concurrencia, FastAPI, uv, Pytest" },
+      { name: "Dart", level: "Avanzado", note: "Flutter SDK, Asincronía, Tipado estático, Audio SoLoud" },
+      { name: "Java", level: "Intermedio / Académico", note: "POO sólida, Colecciones, Concurrencia, JavaFX" },
+      { name: "Rust", level: "En formación activa", note: "Memory Safety, Ownership model, CLI tooling" },
+      { name: "TypeScript / JavaScript", level: "Intermedio", note: "ESNext, React 19, NestJS, async/await" },
     ]
   },
   {
-    category: "Frameworks & UI",
+    category: "Frameworks & Ecosistema",
     icon: "device",
     skills: [
-      { name: "Flutter", level: "Avanzado", note: "Mobile & Web, State Management, Custom Painters" },
-      { name: "React 19", level: "Intermedio", note: "Hooks modernos, Component Driven, Tailwind CSS v4" },
-      { name: "Tailwind CSS v4", level: "Avanzado", note: "Tokens de diseño, Responsive layouts, Dark UI" },
+      { name: "Flutter (Android / Web)", level: "Avanzado", note: "State Management, Firebase, WCAG AA, Animaciones" },
+      { name: "FastAPI", level: "Avanzado", note: "Pydantic v2, Clean Architecture, REST APIs, OpenAPI" },
+      { name: "React 19", level: "Intermedio", note: "Hooks modernos, Component-Driven, Tailwind CSS v4" },
+      { name: "NestJS / Prisma", level: "Intermedio", note: "Monorepos, APIs modulares, PostgreSQL / PostGIS" },
     ]
   },
   {
-    category: "Sistemas & Infraestructura",
+    category: "Sistemas & Metodologías",
     icon: "server",
     skills: [
-      { name: "Linux (Debian / Ubuntu)", level: "Diario", note: "Bash scripting, gestión de procesos, POSIX" },
-      { name: "Git & GitHub", level: "Avanzado", note: "Git Flow, Pull Requests, Conventional Commits" },
-      { name: "REST APIs & JSON", level: "Avanzado", note: "Consumo eficiente, manejo de errores, serialización" },
-      { name: "Estructuras de Datos", level: "Fundamentos Sólidos", note: "Grafos, Árboles, HashMaps, Búsqueda A*" },
+      { name: "Clean Architecture & SOLID", level: "Estricto", note: "Desacoplamiento domain/app/infra, puertos y adaptadores" },
+      { name: "Test-Driven Development (TDD)", level: "Aplicado", note: "Pytest, 100% coverage, pruebas de regresión" },
+      { name: "Docker & Linux", level: "Diario", note: "Docker Compose, multi-stage builds, bash scripting, POSIX" },
+      { name: "Git Flow & CI/CD", level: "Avanzado", note: "Conventional Commits, GitHub Actions workflows" },
     ]
   }
 ];
 
+export const PROJECT_FILTERS = [
+  { id: "all", label: "Todos los Proyectos" },
+  { id: "systems", label: "Clean Architecture & Sistemas" },
+  { id: "mobile", label: "Mobile & UI (Flutter)" },
+  { id: "data", label: "Data, Astrofísica & Concurrencia" },
+];
+
 export const PROJECTS = [
   {
-    id: "sliding-puzzle-engine",
-    code: "PRJ-001 // ENGINE",
-    title: "Sliding Puzzle Engine",
-    subtitle: "Motor reactivo con validación de solvabilidad matemática y búsqueda A*",
+    id: "solar-system-simulator",
+    code: "PRJ-001 // CLEAN-ARCH",
+    category: "systems",
+    title: "Solar System Simulator",
+    subtitle: "Motor astrofísico en Clean Architecture validado con efemérides JPL Horizons",
     description:
-      "Desarrollo de un motor de juego de rompecabezas deslizante (15-puzzle) en Flutter/Dart. Resuelve el problema clásico de estados iniciales irresolubles implementando el Teorema de Paridad de Inversiones Matemáticas en O(N), garantizando tableros 100% jugables. Arquitectura desacoplada entre el motor matemático y la capa de presentación a 60 FPS.",
-    tecnologias: ["Flutter", "Dart", "Algoritmia A*", "State Management", "Discrete Math"],
-    metric: "Solvabilidad O(N) garantizada • 60 FPS estables",
-    github: "https://github.com",
-    demo: "#",
-    badge: "Algoritmia & Mobile"
+      "Simulador astronómico desacoplado con backend en Python/FastAPI. Calcula las posiciones tridimensionales exactas de los planetas respecto al Sol para cualquier fecha mediante el kernel DE440s de JPL (Skyfield). Diseñado con Clean Architecture estricta (Domain, Application, Infrastructure, Presentation) y documentado con 6 ADRs formales.",
+    tecnologias: ["Python 3.10", "FastAPI", "Clean Architecture", "JPL DE440s", "Docker", "Mypy Strict", "Pytest"],
+    metric: "Validación vs JPL Horizons (tolerancia < 1e-6 AU) • ADRs formales • CI en GitHub Actions",
+    github: "https://github.com/Matute0512/solar-system-simulator",
+    demo: "",
+    badge: "Clean Architecture & Python"
   },
   {
-    id: "f1-telemetry-engine",
-    code: "PRJ-002 // DATA-PIPELINE",
-    title: "F1 Telemetry & Analytics Engine",
-    subtitle: "Extracción y análisis de telemetría de alta frecuencia en tiempo real",
+    id: "sliding-puzzle",
+    code: "PRJ-002 // MOBILE-GAME",
+    category: "mobile",
+    title: "Sliding Puzzle 15-Engine",
+    subtitle: "Rompecabezas reactivo con verificación matemática de solvabilidad y Firebase",
     description:
-      "Pipeline de análisis de datos deportivos que consume APIs de telemetría de Fórmula 1. Procesa coordenadas GPS, telemetría de aceleración/frenado, marchas y deltas por micro-sector. Utiliza estructuras de datos optimizadas en memoria para correlacionar vueltas rápidas con latencia mínima de procesamiento.",
-    tecnologias: ["Python", "FastF1 API", "Data Structures", "Time-Series", "Visualización"],
-    metric: "Procesamiento sub-50ms • Normalización multi-sesión",
-    github: "https://github.com",
-    demo: "#",
-    badge: "Data & Systems"
+      "Aplicación multiplataforma en Flutter/Dart (v2.2.1). Implementa el Teorema de Paridad de Inversiones Matemáticas en O(N) para asegurar que todo tablero generado sea resoluble. Incluye ranking global con Cloud Firestore y autenticación anónima, motor de audio SoLoud, modo desafío determinista (20 niveles) y soporte completo de accesibilidad WCAG AA.",
+    tecnologias: ["Flutter", "Dart", "Cloud Firestore", "Firebase Auth", "SoLoud Audio", "Provider", "WCAG AA"],
+    metric: "28 tests unitarios y de widgets • Solvabilidad matemática O(N) • 60 FPS estables",
+    github: "https://github.com/Matute0512/sliding-puzzle",
+    demo: "",
+    badge: "Mobile & Flutter"
   },
   {
-    id: "algorithms-benchmark-suite",
-    code: "PRJ-003 // CS-BENCHMARK",
-    title: "Data Structures & Benchmark Suite",
-    subtitle: "Implementación bare-metal de estructuras de datos y análisis de complejidad",
+    id: "stellar-analyzer",
+    code: "PRJ-003 // DATA-PIPELINE",
+    category: "data",
+    title: "Stellar Analyzer",
+    subtitle: "Pipeline analítico de curvas de luz de la NASA con análisis espectral y Machine Learning",
     description:
-      "Suite de estructuras de datos canónicas (Árboles AVL autobalanceados, Grafos dirigidos ponderados con Dijkstra, Min/Max Heaps y HashMaps) desarrolladas desde cero sin dependencias externas en Java y Rust. Incluye suite automatizada de pruebas unitarias y medición de perfiles de memoria.",
-    tecnologias: ["Java", "Rust", "AVL Trees", "Dijkstra", "Unit Testing", "Big-O Analysis"],
-    metric: "Cero dependencias externas • Cobertura 95%+",
-    github: "https://github.com",
-    demo: "#",
-    badge: "CS Core"
+      "Sistema de astrofísica observacional que consume datos de misiones TESS y Kepler vía la API de MAST (lightkurve). Aplica limpieza de series temporales, detección de períodos espectrales con el algoritmo Lomb-Scargle (astropy), phase folding, detección de alias P/2P y clasificación de estrellas variables con Random Forest (scikit-learn).",
+    tecnologias: ["Python", "Astropy", "Lightkurve (NASA)", "Lomb-Scargle", "Scikit-Learn", "SQLite", "Plotly"],
+    metric: "Pipeline automatizado de fotometría • Clasificación ML con Random Forest • CI Pipeline",
+    github: "https://github.com/Matute0512/stellar-analyzer",
+    demo: "",
+    badge: "Data Science & Astro"
+  },
+  {
+    id: "message-queue-simulator",
+    code: "PRJ-004 // CONCURRENCY",
+    category: "systems",
+    title: "Message Queue Simulator",
+    subtitle: "Simulador concurrente multihilo con manejo de contrapresión (Backpressure) y TDD",
+    description:
+      "Motor concurrente implementado en Python 3.14+ aplicando el patrón Productor-Consumidor. Gestiona colas de prioridad seguras para subprocesos (thread-safe) preservando el orden FIFO por nivel. Maneja contrapresión elegante mediante QueueFullError y QueueEmptyError para prevenir sobrecarga de memoria.",
+    tecnologias: ["Python 3.14", "Multithreading", "TDD", "Backpressure", "Pytest", "Poetry", "Ruff"],
+    metric: "100% de cobertura en tests (TDD estricto) • Control de memoria bajo contrapresión",
+    github: "https://github.com/Matute0512/message-queue-simulator",
+    demo: "",
+    badge: "Concurrencia & TDD"
+  },
+  {
+    id: "pesca-app",
+    code: "PRJ-005 // FULLSTACK-GEO",
+    category: "mobile",
+    title: "PescaBA (Monorepo Geoespacial)",
+    subtitle: "Monorepo pnpm para descubrimiento geoespacial con NestJS, PostGIS y React Native Expo",
+    description:
+      "Plataforma completa de información geográfica estructurada en monorepo pnpm workspaces. Backend modular en NestJS con PostgreSQL/PostGIS para consultas espaciales indexadas, colas en segundo plano con Redis BullMQ, panel de administración en React + Vite + MapLibre y app móvil en Expo (React Native).",
+    tecnologias: ["TypeScript", "NestJS", "PostgreSQL / PostGIS", "Prisma", "Redis / BullMQ", "Expo", "React"],
+    metric: "Monorepo pnpm con TypeScript estricto • Consultas geoespaciales indexadas en PostGIS",
+    github: "https://github.com/Matute0512/pesca-app",
+    demo: "",
+    badge: "Fullstack & Geo"
   }
 ];
