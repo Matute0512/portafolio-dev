@@ -125,28 +125,28 @@ export default function Hero() {
         </div>
 
         {/* Right Column: Interactive Multi-Tab Terminal Window */}
-        <div className="lg:col-span-5">
+        <div className="lg:col-span-5 min-w-0 w-full">
           <div 
-            className="rounded-xl border border-gray-800/90 bg-[#090d16]/95 backdrop-blur-md shadow-2xl overflow-hidden transition-all duration-300 hover:border-emerald-500/30"
+            className="rounded-xl border border-gray-800/90 bg-[#090d16]/95 backdrop-blur-md shadow-2xl overflow-hidden transition-all duration-300 hover:border-emerald-500/30 w-full"
             role="region"
             aria-label="Ventana de terminal interactiva con pestañas de arquitectura y métricas"
           >
             {/* Terminal Title Bar & Window Dots */}
-            <div className="bg-[#0d131f] border-b border-gray-800/80 px-4 py-3 flex items-center justify-between select-none">
-              <div className="flex items-center gap-2" aria-hidden="true">
+            <div className="bg-[#0d131f] border-b border-gray-800/80 px-4 py-3 flex items-center justify-between select-none gap-2">
+              <div className="flex items-center gap-2 shrink-0" aria-hidden="true">
                 <span className="w-3 h-3 rounded-full bg-[#ff5f56]/90 inline-block shadow-sm"></span>
                 <span className="w-3 h-3 rounded-full bg-[#ffbd2e]/90 inline-block shadow-sm"></span>
                 <span className="w-3 h-3 rounded-full bg-[#27c93f]/90 inline-block shadow-sm"></span>
               </div>
               
               {/* Tab Switcher */}
-              <div className="flex items-center gap-1 bg-black/40 p-1 rounded-md border border-gray-800/60 font-mono text-[11px]">
+              <div className="flex items-center gap-1 bg-black/40 p-1 rounded-md border border-gray-800/60 font-mono text-[11px] overflow-x-auto max-w-[200px] sm:max-w-none">
                 {TERMINAL_TABS.map((tab) => (
                   <button
                     key={tab.id}
                     type="button"
                     onClick={() => setActiveTab(tab.id)}
-                    className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                    className={`px-2.5 py-1 rounded transition-colors cursor-pointer whitespace-nowrap ${
                       activeTab === tab.id
                         ? 'bg-gray-800 text-emerald-300 font-semibold shadow-sm'
                         : 'text-gray-400 hover:text-gray-200'
@@ -161,7 +161,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={handleCopyCode}
-                className="text-gray-400 hover:text-emerald-400 p-1 rounded transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-emerald-400 cursor-pointer"
+                className="text-gray-400 hover:text-emerald-400 p-1 rounded transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-emerald-400 cursor-pointer shrink-0"
                 title="Copiar código de la terminal"
                 aria-label="Copiar contenido de la terminal al portapapeles"
               >
@@ -170,15 +170,15 @@ export default function Hero() {
             </div>
 
             {/* Terminal Tab Body */}
-            <div className="p-4 sm:p-5 font-mono text-xs overflow-x-auto">
-              <div className="flex items-center gap-2 text-gray-500 mb-2 select-none">
-                <span className="text-emerald-400">$</span>
+            <div className="p-4 sm:p-5 font-mono text-xs w-full min-w-0">
+              <div className="flex items-center gap-2 text-gray-500 mb-2.5 select-none">
+                <span className="text-emerald-400 font-semibold">$</span>
                 <span>cat {currentTab.fileName}</span>
-                <span className="text-[10px] text-gray-600 bg-gray-900 px-1.5 py-0.2 rounded border border-gray-800 ml-auto">
+                <span className="text-[10px] text-gray-500 bg-gray-900 px-1.5 py-0.5 rounded border border-gray-800 ml-auto">
                   {currentTab.badge}
                 </span>
               </div>
-              <pre className="text-gray-200 leading-relaxed font-mono whitespace-pre bg-black/50 p-3.5 rounded-lg border border-gray-800/60">
+              <pre className="text-gray-200 leading-relaxed font-mono overflow-x-auto whitespace-pre-wrap sm:whitespace-pre bg-black/50 p-3.5 rounded-lg border border-gray-800/80 w-full max-w-full block scrollbar-thin">
                 {currentTab.code}
               </pre>
             </div>

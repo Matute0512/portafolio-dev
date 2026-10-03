@@ -32,11 +32,11 @@ export const TERMINAL_TABS = [
   "status": "Available for Trainee / Junior Roles",
   "focus": [
     "Clean Architecture & DDD Principles",
-    "Concurrent Systems & Backpressure Handling",
+    "Concurrent Systems & Backpressure",
     "Test-Driven Development (TDD)",
-    "Cross-Platform Mobile (Flutter SDK & Dart)"
+    "Cross-Platform Mobile (Flutter & Dart)"
   ],
-  "english_level": "B2 - Technical & Documentation Fluency"
+  "english_level": "B2 - Technical Fluency"
 }`
   },
   {
@@ -46,20 +46,20 @@ export const TERMINAL_TABS = [
     code: `#!/usr/bin/env bash
 # Engineering Mindset & Principles
 echo ">> Verifying system integrity..."
-test_layers --inwards-only "domain -> application -> infrastructure"
-enforce_tdd --coverage="100%" --framework="pytest / flutter_test"
-check_concurrency --pattern="producer-consumer" --backpressure="enabled"
-validate_math --algorithm="Parity Inversion O(N) & JPL Horizons 1e-6 AU"`
+test_layers "domain -> app -> infra"
+enforce_tdd --coverage="100%"
+check_concurrency --backpressure="enabled"
+validate_math --tolerance="1e-6 AU"`
   },
   {
     id: "metrics",
     fileName: "metrics.log",
     badge: "TELEMETRY",
-    code: `[STATUS] CI Pipelines: Passing (Backend CI, Code Quality, Static Analysis)
-[TESTS]  Sliding Puzzle Engine: 28 unit & widget tests verified
-[COVERAGE] Message Queue Simulator: 100% test coverage (Pytest + TDD)
-[ACCURACY] Solar Simulator: JPL DE440s ephemeris verified at 1e-6 AU
-[ACCESSIBILITY] WCAG 2.1 AA compliant • Strict contrast & semantic landmarks`
+    code: `[STATUS] CI Pipelines: Passing (Backend CI, Quality)
+[TESTS]  Sliding Puzzle: 28 unit & widget tests
+[COVERAGE] Message Queue: 100% test coverage (Pytest)
+[ACCURACY] Solar Simulator: JPL DE440s < 1e-6 AU
+[A11Y]   WCAG 2.1 AA compliant • Strict contrast`
   }
 ];
 
